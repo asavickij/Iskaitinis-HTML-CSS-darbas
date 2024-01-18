@@ -1,0 +1,552 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Sigmar One', sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    color: #000;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* common parameters */
+#gallery .container, #products .container, #about-us .container, #testimonials .container, #blog .container, footer .container {
+    padding-top: 100px;
+}
+
+h2 {
+    font-size: 48px;
+    margin-top: 0;
+    font-style: normal;
+    line-height: 57.6px; /* 120% */
+}
+
+#products, #testimonials {
+    background-color: #164780;
+}
+
+body, #blog {
+    background-color: #FCF6DE;
+}
+
+.carret-left, .carret-right {
+    align-self: center;
+}
+
+#about-us h2, #blog h2 {
+    color: #164780;
+}
+
+.gallery, #about-us, #about-us .container, #testimonials, #testimonials .container {
+    position: relative;
+}
+
+/* header */
+header {
+    background-color: #f95738;
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+header .container.flex-container {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo.flex-container {
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+.logo.flex-container p {
+    font-family: 'Manrope', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 24px */
+    text-transform: uppercase;
+    margin: 0 0 0 15px;
+}
+
+.logo.flex-container p:nth-child(2) {
+    font-size: 15px;
+}
+
+.logo-text a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+header nav ul {
+    justify-content: space-between;
+    align-items: center;
+
+    &:hover {
+        a {
+            color: #FFE4C4;
+            &:hover {
+                color: #fff;
+                box-shadow: 0 2px 0 0 currentcolor;
+            }
+
+            &:active {
+                color: #EFBE10;
+            }
+
+        }
+    }
+}
+
+header nav ul li {
+    list-style: none;
+    margin-left: 36px;
+}
+
+header nav ul li a{
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 120% */
+    text-decoration: none;
+}
+
+
+
+.container.header {
+    margin: 0px 300px;
+    padding: 16px 0;
+}
+
+.mobile {
+    display: none;
+}
+
+.mobile > a {
+    color: #fff;
+}
+
+/* banner */
+.banner {
+    background: #f95738 url('..//img/banner.png') no-repeat right center;
+    background-blend-mode: luminosity;
+    padding: 145px 597px 145px 300px;
+    background-size: 950px 800px;
+}
+
+h1 {
+    font-size: 120px;
+    line-height: 85%; /* 102px */;
+    color: #FFF;
+    margin: 51px 0;
+}
+
+/* gallery */
+#gallery {
+    background-image: url('../img/position/blue-ice-cream.png');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-color: #fff;
+}
+
+#gallery .container {
+    width: 1052px;
+    padding-bottom: 104px;
+}
+
+#gallery .flex-container {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.thumbnail {
+    flex-direction: column;
+    gap: 15px;
+    display: flex;
+}
+
+/* products */
+#products {
+    position: relative;
+}
+
+#products .container {
+    padding-bottom: 100px;
+    position: relative;
+}
+
+#products h2 {
+    color: #EFBE10;
+    padding-left: 140px;
+}
+
+.product {
+    width: 334px;
+    background-color: #FFF;
+    border-radius: 40px;
+    text-align: center;
+    padding-bottom: 32px;
+}
+
+.product img {
+    border-radius: 40px 40px 0 0;
+}
+
+.product h4 {
+    font-size: 24px;
+    font-style: normal;
+    line-height: 24px; /* 100% */
+    letter-spacing: 0.96px;
+    margin-bottom: 16px;
+    padding: 0;
+}
+
+.product h4::after {
+    content:"";
+    width:23px;
+    margin:16px auto;
+    border-top:3px solid rgba(0, 0, 0, 1);
+    display:block;
+}
+
+.product p {
+    color: #000;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px; /* 138.889% */
+    letter-spacing: 0.54px;
+    margin-bottom: 0;
+}
+
+.product button {
+    background-color: #FFF;
+    border: 2px solid rgba(22, 71, 128, 1);
+    border-radius: 10px;
+    width: 159px;
+    height: 50px;
+    color: #164780;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+#products .flex-container {
+    justify-content: space-between;
+}
+
+.choc-ice-cream {
+    position: absolute;
+    right: 0;
+    top: 615px;
+}
+
+/* about-us */
+#about-us .container {
+    width: 1314px;
+    padding-bottom: 68px;
+}
+
+#about-us .flex-container {
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#about-us .flex-container p {
+    color: #000;
+    font-family: 'Manrope', sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 41.6px; /* 130% */
+    letter-spacing: -1.6px;
+}
+
+.about-us-text {
+    margin: 0;
+}
+
+/* testimonials */
+#testimonials {
+    position: relative;
+}
+
+#testimonials .flex-container {
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 106px;
+}
+
+.card {
+    background-color: #1A5498;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.card p:nth-of-type(1) {
+    width: 240px;
+    height: 180px;
+    color: #FFF;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 150% */
+    letter-spacing: -0.5px;
+}
+
+.card p:nth-of-type(2) {
+    color: #FFF;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px; /* 150% */
+    margin-bottom: 0;
+}
+
+.card:nth-last-of-type(2) {
+    padding-bottom: 40px;
+}
+
+.happy-lady {
+    position: absolute;
+    right: 50px;
+    bottom: -13px;
+}
+
+/* blog */
+#blog {
+    background-image: url('../img/position/pink-ice-cream.png');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+
+#blog .container {
+    width: 1052px;
+    padding-bottom: 100px;
+}
+
+#blog .container > p {
+    color: #000;
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; /* 150% */
+}
+
+#blog .flex-container {
+    justify-content: space-between;
+}
+
+.blog-card {
+    background-color: #FFF;
+    border-radius: 12px;
+    position: relative;
+}
+
+.blog-card > img {
+    border-radius: 12px 12px 0 0;
+}
+
+.blog-card button {
+    border: none;
+    background-color: #FFF;
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+    box-shadow: 0px 2px 4px rgba(96, 97, 112, 0.16), 0px 0px 1px rgba(40, 41, 61, 0.04);
+    position: absolute;
+    top: 164px;
+    right: 15px;
+}
+
+
+.blog-card p {
+    color: var(--black-700-black, #121212);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 24px */
+    margin: 0;
+    padding: 8px 16px 16px 8px;
+}
+
+/* footer */
+footer {
+    background-color: #000;
+    padding-bottom: 84px;
+}
+
+footer .container {
+    width: 1000px;
+}
+
+.list:nth-of-type(1) {
+    padding-right: 244px;
+}
+
+.list:nth-of-type(2) {
+    padding-right: 278px;
+}
+
+footer h5, footer .flex-container a, p {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    text-decoration: none;
+}
+
+footer h5 {
+    color: #EFBE10;
+    margin: 0;
+}
+
+footer a, p {
+    color: #FFF;
+}
+
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &:hover {
+        a {
+            color: #4e4949;
+            &:hover {
+                color: #CCC;
+                box-shadow: 0 2px 0 0 currentcolor;
+            }
+
+            &:active {
+                color: #EFBE10;
+            }
+
+        }
+    }
+}
+
+.copyright.flex-container {
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding-top: 64px;
+}
+
+footer ul li {
+  line-height: 25px;
+}
+
+/* RESPONSIVE */
+/* max-widht 1697px */
+@media all and (max-width:1697px) {
+    .banner {
+        padding: 90px 597px 90px 300px;
+    }
+}
+
+/* max-widht 1540px */
+@media all and (max-width:1540px) {
+
+    h1 {
+        font-size: 100px;
+        margin: 98px 0;
+    }
+
+    #gallery {
+        background-size: 450px;
+        background-position: right bottom;
+    }
+
+    .happy-lady {
+        right: 10px;
+        bottom: -13px;
+    }
+}
+
+/* max-widht 1433px */
+@media all and (max-width:1433px) {
+
+    .banner {
+        background-size: 900px ;
+    }
+
+    h1 {
+        font-size: 95px;
+        margin: 85px 0;
+    }
+}
+
+/* max-widht 1406px */
+@media all and (max-width:1406px) {
+
+    .banner {
+        background-size: 750px ;
+    }
+
+    h1 {
+        font-size: 85px;
+        margin: 40px 0;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+
+    .mobile ul {
+        display:none;
+        position:absolute;
+        width:100%;
+        top:80px;
+        left:0;
+        padding:20px 0;
+        background-color:#fff;
+        opacity: 0.7;
+    }
+
+    .icon {
+        display:block;
+        position:absolute;
+        right:0;
+        top:-10px;
+        color: #FFF;
+    }
+
+    .mobile li a {
+        color: #f95738;
+    }
+}
